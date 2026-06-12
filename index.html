@@ -105,6 +105,14 @@
   #musicRow { position:absolute; right:24px; bottom:24px; display:flex; gap:12px; }
   #verTag { position:absolute; left:14px; bottom:10px; color:rgba(255,255,255,.7); font-size:12px; font-weight:700; }
 
+  #ctlHelp { background:rgba(40,25,5,.30); border-radius:18px; padding:12px 22px; max-width:560px;
+    display:flex; flex-direction:column; gap:7px; box-shadow:inset 0 2px 4px rgba(0,0,0,.18); }
+  .helpRow { display:flex; align-items:center; gap:10px; color:#fff; font-size:15px; font-weight:700;
+    text-shadow:0 2px 0 rgba(0,0,0,.3); flex-wrap:wrap; justify-content:center; }
+  .helpRow .ic { font-size:19px; }
+  .key { background:rgba(255,255,255,.92); color:#7a4a10; border-radius:7px; padding:2px 8px; font-size:13px;
+    font-weight:900; box-shadow:0 2px 0 rgba(0,0,0,.3); white-space:nowrap; }
+
   #hintRotate { display:none; }
   @media (orientation:portrait) and (max-width:560px) {
     #hintRotate { display:block; position:fixed; top:60px; left:0; right:0; text-align:center; color:#fff;
@@ -157,6 +165,19 @@
     <div class="l2">RACING</div>
   </div>
   <button class="pill pTeal pillBig" id="btnPlay">PLAY</button>
+  <div id="ctlHelp">
+    <div class="helpRow"><span class="ic">&#9000;</span>
+      <span class="key">&#9650; / D</span> GAS &nbsp; <span class="key">&#9660; / A</span> BRAKE &nbsp;
+      <span class="key">SPACE</span> &#129665; CHUTE &nbsp; <span class="key">R</span> RESTART &nbsp; <span class="key">P</span> PAUSE
+    </div>
+    <div class="helpRow"><span class="ic">&#128241;</span>
+      HOLD <span class="key">RIGHT SIDE</span> GAS &nbsp; <span class="key">LEFT SIDE</span> BRAKE &nbsp;
+      &#129665; button in the air
+    </div>
+    <div class="helpRow" style="font-size:13px; opacity:.9;">
+      Flips earn coins &middot; ice has no grip &middot; bridges collapse &middot; don't run out of fuel!
+    </div>
+  </div>
   <div id="musicRow">
     <button class="roundBtn" id="btnMusic" title="Music">&#127925;</button>
     <button class="roundBtn" id="btnSound" title="Sound FX">&#128266;</button>
